@@ -1,0 +1,12 @@
+services:
+  gap8_sdk:
+    build:
+      context: .devcontainer
+      dockerfile: Dockerfile
+      args:
+        USERNAME: gap_user
+    volumes:
+      - .:/home/gap_user/ws/src/
+      - /dev:/dev
+    stdin_open: true
+    tty: true
